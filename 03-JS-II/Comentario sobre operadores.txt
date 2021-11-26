@@ -1,0 +1,4 @@
+Los operadores funcionan como si fueran los porteros de un estadio de futbol.
+
+Ellos ponen las condiciones ( que tarjeta o tarjetas tener o que tarjetas no tener para poder ingresar a una puerta),
+si no cumplen con las condiciones se invita a que pasen a otra area pero no sera esa, 
