@@ -1,0 +1,3 @@
+Los arrays son como variables pero con mas capacidad, las variables solo pueden almacenar un valor, 
+los arrays pueden almacenar muchos valores y con un orden, de esa manera pueden recorrerse para ver que tienen, 
+y asi poder quedarse con algunos, asociar unos con otros, eliminar o agregar otros.
