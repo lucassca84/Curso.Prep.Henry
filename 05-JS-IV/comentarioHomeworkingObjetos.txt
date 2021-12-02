@@ -1,0 +1,9 @@
+Homeworking objetos:
+
+OBJETOS: son cosas, a las que se las puede describir o clasificar por sus caracteristicas. los itemes usados para describir-
+los son las PROPIEDADES a las que se le agregan valores para darle personalidad.
+Los objetos pueden incluir funciones o capacidades o actividades que puede realizar, cuando las funciones se encuentran de-
+finidas dentro de un objeto se las llama METODOS.
+Los bucles for in son utilizados para recorrer o scanear objetos, ya que no poseen indices numericos.
+las notaciones de puntos y de corchetes, son 2 formas para llamar o dirigirse a alguna de las propiedades del objeto y tra-
+bajar ahi.
