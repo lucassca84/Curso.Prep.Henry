@@ -1,0 +1,5 @@
+Los constructores o clases son plantillas, donde se organizan las propiedades que tendran todos los objetos que 
+pertenezcan a la misma. Cuando quiera crear un objeto particular, usare el constructor para ir llenan cada una 
+de la caracteristica con la que tiene mi nuevo objeto. 
+Prototype seria una funcion incluida en la creacion del constructor, a la que cualquer objeto que pertenezca a 
+la misma clase puede llamar y utilizar.
