@@ -1,0 +1,2 @@
+Funcion Call Back; es cuando una funcion usa como argumento otra funcion y la usa dentro se si misma, o la hace parte 
+de ella.
