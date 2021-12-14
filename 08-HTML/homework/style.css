@@ -1,0 +1,14 @@
+img {
+    width: 400px;
+}
+#thirdDiv {
+    height: 25%;
+    width: 100%;
+    background-color: burlywood;
+    padding: 50px;
+    border: 10px violet;
+}
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
