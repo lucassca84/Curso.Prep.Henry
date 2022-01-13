@@ -1,6 +1,6 @@
 // No cambies los nombres de las funciones.
 
-function deObjetoAmatriz(objeto){
+function deObjetoAmatriz(objeto) {
   // Escribe una función que convierta un objeto en una matriz, donde cada elemento representa 
   // un par clave-valor en forma de matriz.
   //Ejemplo: 
@@ -10,7 +10,17 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var properties = Object.getOwnPropertyNames(objeto);
+  var newArray = [];
+  for (let i = 0; i < properties.length; i++) {
+    newArray.push([properties[i], objeto[properties[i]]]);
+  }
+  return newArray;
 }
+
+
+
+
 
 
 function numberOfCharacters(string) {
@@ -18,6 +28,18 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var letras = "";
+  var resultado = {};
+  for (let i = 0; i < string.length; i++) {
+    if (letras.includes(string[i])) {
+      resultado[string[i]] = resultado[string[i]] + 1;
+    } else {
+      letras = `${letras}${string[i]}`;
+      resultado[string[i]] = 1;
+    }
+  }
+  return resultado;
+
 }
 
 
@@ -26,6 +48,27 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var mayus = "";
+  var minus = "";
+  var resultado = "";
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === s[i].toUpperCase()) {
+      mayus = mayus + s[i];
+    } else {
+      minus = minus + s[i];
+    }
+  }
+  resultado = mayus + minus;
+  return resultado;
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -35,18 +78,53 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-} 
+  var palInvert = "";
+  var resultado = "";
+  var palabras = str.split(" ");
+  for (let i = 0; i < palabras.length; i++) {
+    var letras = palabras[i].split("");
+    var letraInv = letras.reverse();
+    if (i < palabras.length - 1) {
+      letraInv.push(" ");
+    }
+    for (let j = 0; j < letraInv.length; j++) {
+      resultado = resultado + letraInv[j];
+    }
+  }
+  return resultado;
+}
 
 
-function capicua(numero){
+function capicua(numero) {
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  numero = "" + numero;
+  let array = [];
+  for (let i = 0; i < numero.length; i++) {
+    array.push(numero[i]);
+  }
+  let suma1 = 0;
+  let suma2 = 0;
+​
+  for (let x = 0; x < Math.round(array.length / 2); x++) {
+    suma1 += Number(array[x]);
+  }
+​
+  for (let x = array.length - 1; x >= Math.floor(array.length / 2); x--) {
+    suma2 += Number(array[x]);
+  }
+  return suma1 === suma2 ? "Es capicua" : "No es capicua";
 }
+console.log(Math.round(4 / 2));
+console.log(capicua(12344321));
 
 
-function deleteAbc(cadena){
+
+
+
+function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
@@ -60,7 +138,7 @@ function sortArray(arr) {
 }
 
 
-function buscoInterseccion(arreglo1, arreglo2){
+function buscoInterseccion(arreglo1, arreglo2) {
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
@@ -74,13 +152,13 @@ function buscoInterseccion(arreglo1, arreglo2){
 // --------------------------------
 
 module.exports = {
-   deObjetoAmatriz,
-   numberOfCharacters,
-   capToFront,
-   asAmirror,
-   capicua,
-   deleteAbc,
-   sortArray,
-   buscoInterseccion,
+  deObjetoAmatriz,
+  numberOfCharacters,
+  capToFront,
+  asAmirror,
+  capicua,
+  deleteAbc,
+  sortArray,
+  buscoInterseccion,
 };
 
