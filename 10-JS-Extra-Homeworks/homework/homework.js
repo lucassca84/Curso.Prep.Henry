@@ -100,34 +100,30 @@ function capicua(numero) {
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  numero = "" + numero;
-  let array = [];
-  for (let i = 0; i < numero.length; i++) {
-    array.push(numero[i]);
+  var strNum = numero.toString();
+  var strCharAux = strNum.split("");
+  var strCharInv = strCharAux.reverse().join("").toString();
+  if (strNum === strCharInv) {
+    return "Es capicua";
+  } else {
+    return "No es capicua";
   }
-  let suma1 = 0;
-  let suma2 = 0;
-​
-  for (let x = 0; x < Math.round(array.length / 2); x++) {
-    suma1 += Number(array[x]);
-  }
-​
-  for (let x = array.length - 1; x >= Math.floor(array.length / 2); x--) {
-    suma2 += Number(array[x]);
-  }
-  return suma1 === suma2 ? "Es capicua" : "No es capicua";
+
+
 }
-console.log(Math.round(4 / 2));
-console.log(capicua(12344321));
-
-
-
 
 
 function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var resultado = cadena.replace(/a/g, "");
+  //Elimino la b
+  resultado = resultado.replace(/b/g, "");
+  //Elimino la c
+  resultado = resultado.replace(/c/g, "");
+  return resultado;
+
 }
 
 
